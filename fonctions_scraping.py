@@ -106,7 +106,7 @@ def creation_fichier_csv(url_category):
         save_path = './Csv_files'
         file_name= nom_category_csv
         completeName = os.path.join(save_path, file_name)
-        with open(completeName, 'w',encoding='utf-8') as csvfile:
+        with open(completeName, 'w',encoding='utf-8-sig') as csvfile:
             fieldnames = ['product_page_url', 'universal_ product_code (upc)','title','price_including_tax','price_excluding_tax','number_available','product_description','category','image', 'rating']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames,dialect='excel')
             writer.writeheader()
